@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen Sheet Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dashboard-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .search-box {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        select, input[type="text"] {
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-button:hover {
+            background-color: #45a049;
+        }
+
+        .create-new-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .create-new-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Kaizen Sheet Dashboard</h2>
+        
+        <!-- Plant Selection for Approving Person -->
+        <div>
+            <label for="plant">Select Plant:</label>
+            <select id="plant" name="plant">
+                <option value="plant1">Plant 1</option>
+                <option value="plant2">Plant 2</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+
+        <!-- Date-wise Search Box -->
+        <div class="search-box">
+            <input type="date" id="date" name="date" placeholder="Search by Date">
+            <button type="button" class="search-button">Search by Date</button>
+        </div>
+
+        <!-- Revision Number-wise Search Box -->
+        <div class="search-box">
+            <input type="text" id="revisionNumber" name="revisionNumber" placeholder="Please enter Revision Number">
+            <button type="button" class="search-button">Search by Revision Number</button>
+        </div>
+
+        <!-- Create New Button -->
+        <button type="button" class="create-new-button">Create New</button>
+
+        <!-- Display data table (example) -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Revision Number</th>
+                    <th>Audited by</th>
+                    <th>Targeted Date</th>
+                    <th>View/Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td><button type="button">View</button>
+                        <button type="button">Download</button>
+
+                    <!-- Add more rows and data as needed -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
